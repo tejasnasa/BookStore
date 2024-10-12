@@ -2,10 +2,13 @@ import express from "express";
 import "dotenv/config";
 import mongoose, { Mongoose } from "mongoose";
 import booksRoute from "./routes/booksRoute.js";
+import cors from "cors";
 
 const app = express();
 
 app.use(express.json());
+
+app.use(cors());
 
 const port = process.env.PORT;
 
